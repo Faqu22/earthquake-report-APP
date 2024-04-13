@@ -9,7 +9,6 @@ class Api::FeaturesController < ApplicationController
     @features = Feature.all
     filter_by_mag_type
     paginate_features
-        
     render json: format_features(@features)
   end
   
