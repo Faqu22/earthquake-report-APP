@@ -47,7 +47,7 @@ Puedes obtener más información sobre los datos sísmicos y el servicio de eart
 
 2. Abre una terminal o símbolo del sistema y navega hasta la ubicación del proyecto.
 
-3. Ejecuta el siguiente comando para ejecutar el archivo run.sh:
+3. Ejecuta el siguiente comando para ejecutar el archivo run.bat:
   ```bash
   run.bat
   ```
