@@ -18,4 +18,4 @@ echo Iniciando el contenedor de tareas...
 
 docker-compose up -d cron
 
-echo ¡Todos los contenedores han sido iniciados correctamente!
+echo ¡Todos los contenedores del backend han sido iniciados correctamente!

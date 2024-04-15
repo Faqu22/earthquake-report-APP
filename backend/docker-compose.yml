@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: backend_frogmi
-    command: ['bash', '-c', 'rails db:migrate && rails s']
+    command: ['bash', '-c', 'rails db:prepare && rails db:migrate && rails s']
     ports:
       - "3000:3000"
     volumes:
