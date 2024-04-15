@@ -49,7 +49,7 @@ Puedes obtener más información sobre los datos sísmicos y el servicio de eart
 
 3. Ejecuta el siguiente comando para ejecutar el archivo run.sh:
   ```bash
-  sh run.sh
+  run.bat
   ```
 
 ¡Eso es todo! El proyecto debería comenzar a ejecutarse utilizando Docker.
