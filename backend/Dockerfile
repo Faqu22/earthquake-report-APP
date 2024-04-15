@@ -21,6 +21,8 @@ FROM base as build
 RUN apt-get update -qq && \
   apt-get install --no-install-recommends -y build-essential git libvips pkg-config
 
+
+
 # Install application gems
 COPY Gemfile Gemfile.lock ./
 RUN bundle install && \
@@ -44,19 +46,13 @@ RUN apt-get update -qq && \
 
 RUN apt-get update -qq && apt-get install -y build-essential 
 
-
 RUN gem install rails
-
-RUN gem install mysql2
 
 # Copy built artifacts: gems, application
 COPY --from=build /usr/local/bundle /usr/local/bundle
 COPY --from=build /rails /rails
 
 # Run and own only the runtime files as a non-root user for security
-RUN useradd rails --create-home --shell /bin/bash && \
-  chown -R rails:rails db log storage tmp
-USER rails:rails
 
 RUN rm -f /rails/tmp/pids/server.pid
 
