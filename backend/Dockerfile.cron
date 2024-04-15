@@ -27,4 +27,6 @@ RUN bundle install && \
 
 RUN gem install whenever
 
+RUN gem install mysql2
+
 COPY . .

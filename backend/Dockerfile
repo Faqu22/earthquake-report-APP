@@ -47,6 +47,7 @@ RUN apt-get update -qq && apt-get install -y build-essential
 
 RUN gem install rails
 
+RUN gem install mysql2
 
 # Copy built artifacts: gems, application
 COPY --from=build /usr/local/bundle /usr/local/bundle
