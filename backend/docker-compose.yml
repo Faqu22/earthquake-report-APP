@@ -18,7 +18,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: backend_frogmi
-    command: ['bash', '-c', 'rails db:migrate --trace && rails s']
+    command: ['bash', '-c', 'bundle install && rails db:migrate --trace && rails s']
     ports:
       - "3000:3000"
     volumes:
