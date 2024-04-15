@@ -3,6 +3,8 @@ echo Iniciando servicio del backend
 
 cd backend
 
+docker-compose up -d mysql
+
 docker-compose up -d web
 
 :loop
